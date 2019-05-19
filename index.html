@@ -4,6 +4,16 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width">
 	<title>Pedro Lucas</title>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script>
+		$(document).ready(function(){
+		    $('.show').click(function() {
+		      $('.sobre').toggle("fade");
+		    });
+		});
+	</script>
+
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300&display=swap" rel="stylesheet">
 	<style type="text/css">
 
@@ -25,10 +35,12 @@
 			top: 46%;
 			left: 50%;
 			transform: translateX(-50%);
+			cursor: default;
 		}
 		.title {
 			font-size: 30px;
 			margin-bottom: 20px;
+			cursor: default;
 		}
 		a {
 			color: white;
@@ -44,15 +56,28 @@
 				display: block;
 			}
 		}
+        .show {
+            cursor: pointer;
+        }
+		.sobre {
+			margin-top: 20px;
+			cursor: default;
+			display: none;
+		}
 
 	</style>
 </head>
 <body>
 	<div class="centered-div">
 		<div class="title">PEDRO LUCAS</div>
-		<a href="http://www.instagram.com/imcalledpedro" target="_blank">Instagram</a>
-		<a href="#">Projetos</a>
-		<a href="#">Sobre</a>
+		<a href="http://www.instagram.com/imcalledpedro">Instagram</a>
+		<a href="#">Minimalismo</a>
+		<a class="show">Sobre</a>
+		<div class="sobre">
+		Estudante IFRN | Web Junior Developer | RN-BRL based
+		</div>
 	</div>
+
+
 </body>
 </html>
