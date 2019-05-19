@@ -1,2 +1,2 @@
-# imcalledpedro.github.io
+# pedrolucas.github.io
 Site Pessoal
