@@ -1,34 +1,53 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
+	<!-- basic -->
 	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Pedro Lucas</title>
 
+	<!-- about-animation -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<script>
 		$(document).ready(function(){
 		    $('.show').click(function() {
-		      $('.sobre').toggle("fade");
+		    	$('#home').toggle("slide");
+		     	$('#about').toggle("slide");
 		    });
 		});
 	</script>
 
-	<link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300&display=swap" rel="stylesheet">
+	<!-- font-awesome-icons -->
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+
+	<!-- fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Kaushan+Script|Open+Sans|Open+Sans+Condensed:300&display=swap" rel="stylesheet">
+
+	<!-- favicon -->
+	<link rel="shortcut icon" href="/favicon.ico">
+
+	<!-- css -->
 	<style type="text/css">
 
 		body {
-			background: #141E30;  /* fallback for old browsers */
-			background: -webkit-linear-gradient(to right, #243B55, #141E30);  /* Chrome 10-25, Safari 5.1-6 */
-			background: linear-gradient(to right, #243B55, #141E30); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
-			height: 100vh;
+			background-color: black;
+			
+			/* RESPONSIVE BACKGROUND IMAGE */
+			/*background-image: url(bg2.jpg);
+			background-size: cover;
+			background-attachment: fixed;
+			background-repeat: no-repeat; 
+			background-position: center;
+			*/
+
 			margin: 0;
 			padding: 0;
+
 			color: white;
+
 			text-align: center;
 			font-family: 'Open Sans	Condensed', sans-serif;
-			text-shadow: 2px 2px 2px #141E30;
 		}
 
 		.centered-div {
@@ -40,6 +59,7 @@
 			cursor: default;
 		}
 		.title {
+			font-family: 'Kaushan Script', cursive;
 			font-size: 30px;
 			margin-bottom: 20px;
 			cursor: default;
@@ -53,31 +73,80 @@
 		@media screen and (max-width: 600px){
 			.centered-div {
 				top: 20%;
+				left: 0;
+				transform: translate(100%);
 			}
 			a {
 				display: block;
 			}
+
+			.sobre {
+				width: 500px;
+			}
+
 		}
+
 		.show {
 		    cursor: pointer;
 		}
+
 		.sobre {
 			margin-top: 20px;
 			cursor: default;
-			display: none;
 		}
 
+		/*ANIMISTA PRESETS*/
+		.text-shadow-drop-center {
+			-webkit-animation: text-shadow-drop-center 0.6s both;
+			        animation: text-shadow-drop-center 0.6s both;
+			        animation-delay: 0.5s;
+		}
+
+		@-webkit-keyframes text-shadow-drop-center {
+		  0% {
+		    text-shadow: 0 0 0 #000);
+		  }
+		  100% {
+		    text-shadow: 0 0 18px #ededed;
+		  }
+		}
+		@keyframes text-shadow-drop-center {
+		  0% {
+		    text-shadow: 0 0 0 #000;
+		  }
+		  100% {
+		    text-shadow: 0 0 18px #ededed;
+		  }
+		}
+
+		#about {
+			display: none;
+		}
 	</style>
+
 </head>
 <body>
-	<div class="centered-div">
-		<div class="title">PEDRO LUCAS</div>
-		<a href="http://www.instagram.com/imcalledpedro" target="_blank">Instagram</a>
-		<a href="#">Projetos</a>
-		<a class="show">Sobre</a>
-		<div class="sobre">
-		Estudante IFRN | Junior Web Developer | RN-BRL based
-		</div>
+
+	<div id="home" class="centered-div">
+
+		<div class="title text-shadow-drop-center">Pedro Lucas</div>
+
+		<a href="http://www.instagram.com/imcalledpedro" target="_blank"><i class="fab fa-instagram"></i></a>
+		<a href="#"><i class="fab fa-github"></i></a>
+		<a class="show"><i class="fas fa-user"></i></a>
+
+	</div>
+
+
+
+	<div id="about" class="centered-div">
+
+		<a class="show"><i class="fas fa-chevron-left"></i></a>
+
+		<div class="title text-shadow-drop-center">Pedro Lucas</div>
+
+		<div class="sobre">Estudante IFRN | Junior Web Developer | RN-BRL based</div>
+		
 	</div>
 
 
