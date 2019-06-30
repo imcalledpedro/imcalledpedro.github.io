@@ -1,2 +1,6 @@
 # imcalledpedro.github.io
-Site Pessoal
+
+SITE PESSOAL
+- Sobre mim
+- Instagram
+- Github link
