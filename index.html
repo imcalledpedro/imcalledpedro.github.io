@@ -10,10 +10,7 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<script>
 		$(document).ready(function(){
-		    $('.show').click(function() {
-		    	$('#home').toggle("slide");
-		     	$('#about').toggle("slide");
-		    });
+		    $('.show').click(function() {$('#home').toggle("slide");$('#about').toggle("slide");});
 		});
 	</script>
 
@@ -21,7 +18,7 @@
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
 
 	<!-- fonts -->
-	<link href="https://fonts.googleapis.com/css?family=Kaushan+Script|Open+Sans|Open+Sans+Condensed:300&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:500&display=swap" rel="stylesheet">
 
 	<!-- favicon -->
 	<link rel="shortcut icon" href="/favicon.ico">
@@ -30,25 +27,15 @@
 	<style type="text/css">
 
 		body {
-
-			background-color: black;
-			
-			/* RESPONSIVE BACKGROUND IMAGE */
-			/*background-image: url(bg2.jpg);
-			background-size: cover;
-			background-attachment: fixed;
-			background-repeat: no-repeat; 
-			background-position: center;
-			*/
-
 			margin: 0;
 			padding: 0;
-
-			color: white;
-
+			background-color: black;
+			color: #fff;
 			text-align: center;
-			font-family: 'Open Sans	Condensed', sans-serif;
+			font-family: 'Montserrat', sans-serif;
 		}
+
+		#home a:hover {color: #3498db}
 
 		.centered-div {
 			height: auto;
@@ -58,81 +45,256 @@
 			transform: translateX(-50%);
 			cursor: default;
 		}
+
 		.title {
-			font-family: 'Kaushan Script', cursive;
+			font-family: 'Montserrat', sans-serif;
 			font-size: 30px;
 			margin-bottom: 20px;
 			cursor: default;
+			text-transform: uppercase;
+			letter-spacing: 0.2em;
 		}
+
 		a {
 			color: white;
 			text-decoration: none;
 			padding: 10px;
 		}
 
-		.show {
-		    cursor: pointer;
+		.show {cursor: pointer}
+
+		.button {
+			margin: 10px;
+			border-radius: 20px;
+			background-color: #fff;
+			color: #000
 		}
+
+		.button:hover {
+			background-color: #3498db;
+			color: #000;
+			border: 0;
+		}
+
+		.button:hover + .sobre{color: rgba(255,255,255,.3)}
 
 		.sobre {
 			margin-top: 20px;
 			cursor: default;
 		}
 
-		/*ANIMISTA PRESETS*/
-		.text-shadow-drop-center {
-			-webkit-animation: text-shadow-drop-center 0.6s both;
-			        animation: text-shadow-drop-center 0.6s both;
-			        animation-delay: 0.5s;
-		}
+		#about {display: none}
 
-		@-webkit-keyframes text-shadow-drop-center {
+		/* GLITCH ANIMATION */
+		.glitch {position: relative}
+		.glitch::before, .glitch::after {
+			content: attr(data-text);
+			position: absolute;
+			//top: 0;
+			//left: 0;
+			//width: 100%;
+			//height: 100%;
+			//background: black;
+		}
+		.glitch::before {
+		  left: 2px;
+		  text-shadow: -2px 0 #3498db ;
+		  clip: rect(24px, 550px, 90px, 0);
+		  animation: glitch-anim-2 2s infinite linear alternate-reverse;
+		}
+		.glitch::after {
+		  left: -2px;
+		  text-shadow: -2px 0 #ff00c1;
+		  clip: rect(85px, 550px, 140px, 0);
+		  animation: glitch-anim 1.5s infinite linear alternate-reverse;
+		}
+		@keyframes glitch-anim {
 		  0% {
-		    text-shadow: 0 0 0 #000);
+		    clip: rect(142px, 9999px, 25px, 0);
+		  }
+		  4.166666666666666% {
+		    clip: rect(84px, 9999px, 72px, 0);
+		  }
+		  8.333333333333332% {
+		    clip: rect(15px, 9999px, 75px, 0);
+		  }
+		  12.5% {
+		    clip: rect(96px, 9999px, 54px, 0);
+		  }
+		  16.666666666666664% {
+		    clip: rect(121px, 9999px, 79px, 0);
+		  }
+		  20.833333333333336% {
+		    clip: rect(0px, 9999px, 30px, 0);
+		  }
+		  25% {
+		    clip: rect(61px, 9999px, 66px, 0);
+		  }
+		  29.166666666666668% {
+		    clip: rect(53px, 9999px, 56px, 0);
+		  }
+		  33.33333333333333% {
+		    clip: rect(143px, 9999px, 81px, 0);
+		  }
+		  37.5% {
+		    clip: rect(92px, 9999px, 26px, 0);
+		  }
+		  41.66666666666667% {
+		    clip: rect(71px, 9999px, 46px, 0);
+		  }
+		  45.83333333333333% {
+		    clip: rect(40px, 9999px, 106px, 0);
+		  }
+		  50% {
+		    clip: rect(48px, 9999px, 18px, 0);
+		  }
+		  54.166666666666664% {
+		    clip: rect(145px, 9999px, 38px, 0);
+		  }
+		  58.333333333333336% {
+		    clip: rect(31px, 9999px, 84px, 0);
+		  }
+		  62.5% {
+		    clip: rect(116px, 9999px, 5px, 0);
+		  }
+		  66.66666666666666% {
+		    clip: rect(47px, 9999px, 99px, 0);
+		  }
+		  70.83333333333334% {
+		    clip: rect(97px, 9999px, 70px, 0);
+		  }
+		  75% {
+		    clip: rect(84px, 9999px, 104px, 0);
+		  }
+		  79.16666666666666% {
+		    clip: rect(43px, 9999px, 15px, 0);
+		  }
+		  83.33333333333334% {
+		    clip: rect(147px, 9999px, 55px, 0);
+		  }
+		  87.5% {
+		    clip: rect(83px, 9999px, 32px, 0);
+		  }
+		  91.66666666666666% {
+		    clip: rect(129px, 9999px, 57px, 0);
+		  }
+		  95.83333333333334% {
+		    clip: rect(71px, 9999px, 124px, 0);
 		  }
 		  100% {
-		    text-shadow: 0 0 18px #ededed;
+		    clip: rect(25px, 9999px, 52px, 0);
 		  }
 		}
-		@keyframes text-shadow-drop-center {
-		  0% {
-		    text-shadow: 0 0 0 #000;
+		@keyframes glitch-anim-2 {
+		  6.666666666666667% {
+		    clip: rect(145px, 9999px, 126px, 0);
+		  }
+		  10% {
+		    clip: rect(104px, 9999px, 1px, 0);
+		  }
+		  13.333333333333334% {
+		    clip: rect(95px, 9999px, 109px, 0);
+		  }
+		  16.666666666666664% {
+		    clip: rect(123px, 9999px, 24px, 0);
+		  }
+		  20% {
+		    clip: rect(115px, 9999px, 39px, 0);
+		  }
+		  23.333333333333332% {
+		    clip: rect(45px, 9999px, 51px, 0);
+		  }
+		  26.666666666666668% {
+		    clip: rect(61px, 9999px, 42px, 0);
+		  }
+		  30% {
+		    clip: rect(75px, 9999px, 27px, 0);
+		  }
+		  33.33333333333333% {
+		    clip: rect(69px, 9999px, 21px, 0);
+		  }
+		  36.666666666666664% {
+		    clip: rect(43px, 9999px, 105px, 0);
+		  }
+		  40% {
+		    clip: rect(89px, 9999px, 12px, 0);
+		  }
+		  43.333333333333336% {
+		    clip: rect(67px, 9999px, 108px, 0);
+		  }
+		  46.666666666666664% {
+		    clip: rect(82px, 9999px, 98px, 0);
+		  }
+		  50% {
+		    clip: rect(86px, 9999px, 21px, 0);
+		  }
+		  53.333333333333336% {
+		    clip: rect(31px, 9999px, 31px, 0);
+		  }
+		  56.666666666666664% {
+		    clip: rect(11px, 9999px, 35px, 0);
+		  }
+		  60% {
+		    clip: rect(5px, 9999px, 30px, 0);
+		  }
+		  63.33333333333333% {
+		    clip: rect(53px, 9999px, 108px, 0);
+		  }
+		  66.66666666666666% {
+		    clip: rect(68px, 9999px, 59px, 0);
+		  }
+		  70% {
+		    clip: rect(133px, 9999px, 19px, 0);
+		  }
+		  73.33333333333333% {
+		    clip: rect(144px, 9999px, 87px, 0);
+		  }
+		  76.66666666666667% {
+		    clip: rect(54px, 9999px, 121px, 0);
+		  }
+		  80% {
+		    clip: rect(87px, 9999px, 99px, 0);
+		  }
+		  83.33333333333334% {
+		    clip: rect(43px, 9999px, 112px, 0);
+		  }
+		  86.66666666666667% {
+		    clip: rect(55px, 9999px, 127px, 0);
+		  }
+		  90% {
+		    clip: rect(140px, 9999px, 88px, 0);
+		  }
+		  93.33333333333333% {
+		    clip: rect(78px, 9999px, 144px, 0);
+		  }
+		  96.66666666666667% {
+		    clip: rect(147px, 9999px, 50px, 0);
 		  }
 		  100% {
-		    text-shadow: 0 0 18px #ededed;
+		    clip: rect(65px, 9999px, 52px, 0);
 		  }
 		}
+		/* end GLITCH ANIMATION */
 
-		#about {
-			display: none;
+		@media screen and (max-width: 800px) {
+			.title {
+				font-size: 5vw;
+			}
 		}
+
 	</style>
-
 </head>
 <body>
-
 	<div id="home" class="centered-div">
-
-		<div class="title text-shadow-drop-center">Pedro Lucas</div>
-
+		<div class="title glitch" data-text="PedroLucas">PedroLucas</div>
 		<a href="http://www.instagram.com/imcalledpedro" target="_blank"><i class="fab fa-instagram"></i></a>
-		<a href="#"><i class="fab fa-github"></i></a>
+		<a href="https://github.com/imcalledpedro" target="_blank"><i class="fab fa-github"></i></a>
 		<a class="show"><i class="fas fa-user"></i></a>
-
 	</div>
-
-
-
 	<div id="about" class="centered-div">
-
-		<a class="show"><i class="fas fa-chevron-left"></i></a>
-
-		<div class="title text-shadow-drop-center">Pedro Lucas</div>
-
-		<div class="sobre">Estudante IFRN | Junior Web Developer | RN-BRL based</div>
-		
+		<div class="title" data-text="PedroLucas">PedroLucas</div>
+		<a class="show button"><i class="fas fa-chevron-left"></i></a>
+		<div class="sobre">imcalledpedro@gmail.com | Rio Grande do Norte, Brasil <br><br> Estudante, programador, fotógrafo, web designer, baterista, minimalista e cristão.</div>
 	</div>
-
-
 </body>
 </html>
