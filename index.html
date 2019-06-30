@@ -22,15 +22,21 @@
 	<link href="https://fonts.googleapis.com/css?family=Montserrat:500&display=swap" rel="stylesheet">
 
 	<!-- favicon -->
-	<link rel="shortcut icon" href="/favicon.ico">
+	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+	<link rel="icon" href="favicon.ico" type="image/x-icon">
 
 	<!-- css -->
 	<style type="text/css">
 
+		html {
+			background: url(bg.png) no-repeat center center fixed;
+			background-size: cover;
+		}
+
 		body {
+			height: auto;
 			margin: 0;
-			padding: 0;
-			background-color: black;
+			padding: 0;			
 			color: #fff;
 			text-align: center;
 			font-family: 'Montserrat', sans-serif;
@@ -38,7 +44,15 @@
 
 		#home a:hover {color: #3498db}
 
-		.centered-div {
+		.centered-home {
+			height: auto;
+			position: absolute;
+			top: 46%;
+			left: 50%;
+			transform: translateX(-50%);
+			cursor: default;
+		}
+		.centered-about {
 			height: auto;
 			position: absolute;
 			top: 46%;
@@ -67,17 +81,11 @@
 		.button {
 			margin: 10px;
 			border-radius: 20px;
-			background-color: #fff;
-			color: #000
+			background-color: rgba(52, 152, 219,0.2);
+			color: #fff;
 		}
 
-		.button:hover {
-			background-color: #3498db;
-			color: #000;
-			border: 0;
-		}
-
-		.button:hover + .sobre{color: rgba(255,255,255,.3)}
+		.button:hover {background-color: rgba(52, 152, 219,0.3)}
 
 		.sobre {
 			margin-top: 20px;
@@ -281,23 +289,83 @@
 			.title {
 				font-size: 5vw;
 			}
+			.centered-about {
+				height: auto;
+				position: static;
+				top: 0;
+				left: 0;
+				transform: translateX(0);
+				cursor: default;
+				padding: 10vh 5vw;
+			}
+			
+		}
+
+		.a-left {
+			text-align: justify;
+		}
+
+		.sobre .fab {
+			font-size: 30px;
+			padding: 10px;
+		}
+
+		.pb100 {
+			padding-bottom: 10vh;
+		}
+
+		/* width */
+		::-webkit-scrollbar {
+		  width: 5px;
+		}
+
+		/* Track */
+		::-webkit-scrollbar-track {
+		  background: rgba(0,0,0,1); 
+		}
+		 
+		/* Handle */
+		::-webkit-scrollbar-thumb {
+		  background: rgba(52, 152, 219,0.6); 
+		}
+
+		/* Handle on hover */
+		::-webkit-scrollbar-thumb:hover {
+		  background: rgba(52, 152, 219,0.7); 
 		}
 
 	</style>
 </head>
 <body>
-	<div id="home" class="centered-div">
+	<div id="home" class="centered-home">
 		<div class="title glitch" data-text="PedroLucas">PedroLucas</div>
 		<a href="http://www.instagram.com/imcalledpedro" target="_blank"><i class="fab fa-instagram"></i></a>
 		<a href="https://github.com/imcalledpedro" target="_blank"><i class="fab fa-github"></i></a>
 		<a class="show"><i class="fas fa-user"></i></a>
 	</div>
-	<div id="about" class="centered-div">
-		<div class="title" data-text="PedroLucas">PedroLucas</div>
+	<div id="about" class="centered-about" style="top:100px">
+		<div class="title">PedroLucas</div>
 		<a class="show button"><i class="fas fa-chevron-left"></i></a>
-		<div class="sobre">imcalledpedro@gmail.com | Rio Grande do Norte, Brasil <br><br> Estudante, programador, fotógrafo, web designer, baterista, minimalista e cristão.</div>
+		<div class="sobre">
+			imcalledpedro@gmail.com | Rio Grande do Norte, Brasil<br><br>
+			Estudante | Informática para Internet | Desenvolvimento Web<br><br>
+			SKILLS <br><br>
+			<i class="fab fa-css3-alt"></i>
+			<i class="fab fa-html5"></i>
+			<i class="fab fa-github-square"></i>
+			<i class="fab fa-adobe"></i>
+		</div>
+		<div class="sobre a-left">
+			EDUCAÇÃO<br><br>
+			<i class="fas fa-graduation-cap"></i> IFRN Natal - Zona Norte | Ensino Médio + Técnico Integrado em Informática para Internet (cursando)
+		</div>
+		<div class="sobre a-left">
+			CERTIFICADOS<br><br>
+			<i class="fas fa-award"></i> Minicurso KTurtle: Um Software Livre Educativo para o Ensino de Programação
+na Escola Pública
+		</div>
+
+		<div class="pb100"></div>
 	</div>
-	
-	<audio autoplay><source src="glitch.mp3" type="audio/mpeg"></audio>
 </body>
 </html>
