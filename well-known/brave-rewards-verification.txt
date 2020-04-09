@@ -1,0 +1,4 @@
+This is a Brave Rewards publisher verification file.
+
+Domain: imcalledpedro.github.io
+Token: 7658985ae2141f48997320b6987029d83006fb9694dc55f8c000ee031f066c1c
