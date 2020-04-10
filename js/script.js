@@ -67,7 +67,8 @@ const phrases = [
 'sou Desenvolvedor Web',
 'amante de Design',
 'e fotografia',
-'seja bem vindo ao meu site!'
+'seja bem vindo ao meu site!',
+'Pedro Lucas'
 ];
 
 
@@ -75,11 +76,18 @@ const el = document.querySelector('.text');
 const fx = new TextScramble(el);
 
 let counter = 0;
+// const next = () => {
+//   fx.setText(phrases[counter]).then(() => {
+//     setTimeout(next, 800);
+//   });
+//   counter = (counter + 1) % phrases.length;
+// };
+
 const next = () => {
   fx.setText(phrases[counter]).then(() => {
     setTimeout(next, 800);
   });
-  counter = (counter + 1) % phrases.length;
+  counter = (counter + 1);
 };
 
 next();

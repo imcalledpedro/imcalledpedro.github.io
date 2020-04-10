@@ -96,26 +96,68 @@ body {
   border: 2px solid #777;
   background-color: transparent;
 }
-.card a:after {
+/*.card a:after {
   background: #777;
 }
 
 .card a:hover{
-  border: 2px solid #777;
+  border: 2px solid #296;
+}*/
+
+:root {
+  --d: 700ms;
+  --e: cubic-bezier(0.19, 1, 0.22, 1);
+  --font: 'Nunito', sans-serif;
+  --card1: #777777;
+  --card2: #5c6bc0;
+  --card3: #5092c2;
+  --card4: #aaaaaa;
+}
+.card:nth-child(1) {
+  border: 2px solid var(--card1);
+  color: var(--card1);
+}
+.card:nth-child(2) {
+  border: 2px solid var(--card2);
+  color: var(--card2);
+}
+.card:nth-child(3) {
+  border: 2px solid var(--card3);
+  color: var(--card3);
+}
+.card:nth-child(4): {
+  border: 2px solid var(--card4);
+  color: var(--card4);
 }
 
-.card:nth-child(1):before {
-  
+.card:nth-child(1) a{
+  border: 2px solid var(--card1);
+  color: var(--card1);
 }
-.card:nth-child(2):before {
-  
-  
+.card:nth-child(2) a{
+  border: 2px solid var(--card2);
+  color: var(--card2);
 }
-.card:nth-child(3):before {
-  
+.card:nth-child(3) a{
+  border: 2px solid var(--card3);
+  color: var(--card3);
 }
-.card:nth-child(4):before {
-  
+.card:nth-child(4): a{
+  border: 2px solid var(--card4);
+  color: var(--card4);
+}
+
+.card:nth-child(1) a:after{
+  background-color:  var(--card1);
+}
+.card:nth-child(2) a:after{
+  background-color: var(--card2);
+}
+.card:nth-child(3) a:after{
+  background-color: var(--card3);
+}
+.card:nth-child(4): a:after{
+  background-color: var(--card4);
 }
 
 .content {
