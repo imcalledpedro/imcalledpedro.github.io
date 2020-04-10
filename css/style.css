@@ -1,8 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;600&display=swap');
+@import 'https://fonts.googleapis.com/css?family=Roboto+Mono:100';
 
 html, body {
-    background-color: #000;
-    color: #f3f3f3;
+    background-color: #f3f3f3;
+    color: #777;
     font-family: 'Nunito', sans-serif;
     font-weight: 200;
     height: 100vh;
@@ -33,9 +34,9 @@ html, body {
     text-align: center;
 }
 
-.title {
+/*.title {
     font-size: 84px;
-}
+}*/
 
 /*.links > a {
     color: #636b6f;
@@ -95,4 +96,12 @@ a:hover:after {
     ul {
         margin-top: 40px;
     }
+}
+.text {
+  font-weight: 400;
+  font-size: 40px;
+  color: #777777;
+}
+.dud {
+  color: #757575;
 }
